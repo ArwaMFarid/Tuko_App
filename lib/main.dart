@@ -21,6 +21,7 @@ class TukoApp extends StatelessWidget {
         theme: ThemeData(
           scaffoldBackgroundColor: AppColor.beig,
           appBarTheme: AppBarTheme(
+            scrolledUnderElevation: 0,
             backgroundColor: AppColor.beig,
             foregroundColor: Colors.black,
             titleTextStyle: TextStyle(color: AppColor.black),

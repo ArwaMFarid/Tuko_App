@@ -86,14 +86,14 @@ class _NumberScreenState extends State<NumberScreen> {
         title: Text("Numbers", style: TextStyle(color: AppColor.black,fontSize: 28),),
       ),
       body: ListView.builder(
-        itemCount: 10,
+        itemCount: numbers.length,
         itemBuilder: (context,index){
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: Center(
               child: Column(
                 children: [
-                  Item(number: numbers[index]),
+                  CustomItemCard(item: numbers[index]),
                 ],
               ),
             ),

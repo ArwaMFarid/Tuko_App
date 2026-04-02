@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:tuko_app/core/app_color.dart';
 import 'package:tuko_app/models/card_model.dart';
 
-class Item extends StatefulWidget {
-  final CardModel number;
-  const Item({required this.number, super.key});
+class CustomItemCard extends StatefulWidget {
+  final CardModel item;
+  const CustomItemCard({required this.item, super.key});
 
   @override
-  State<Item> createState() => _ItemState();
+  State<CustomItemCard> createState() => _CustomItemCardState();
 }
 
-class _ItemState extends State<Item> {
+class _CustomItemCardState extends State<CustomItemCard> {
   bool soundIsPlayer = false;
   @override
   Widget build(BuildContext context) {
@@ -25,16 +25,19 @@ class _ItemState extends State<Item> {
       width: double.infinity,
       child: Row(
         children: [
+          if (widget.item.image != null)
           Expanded(
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(image: AssetImage(widget.number.image)),
+                image: widget.item.image != null
+                    ? DecorationImage(image: AssetImage(widget.item.image!))
+                    :null,
                 color: AppColor.olive,
               ),
             ),
           ),
-          SizedBox(width: MediaQuery.of(context).size.width * 0.06),
+          SizedBox(width: MediaQuery.of(context).size.width * 0.03),
 
           Expanded(
             child: Column(
@@ -42,11 +45,11 @@ class _ItemState extends State<Item> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  widget.number.japaneseName,
-                  style: TextStyle(color: AppColor.black, fontSize: 23),
+                  widget.item.japaneseName,
+                  style: TextStyle(color: AppColor.black, fontSize: 22),
                 ),
                 Text(
-                  widget.number.englishName,
+                  widget.item.englishName,
                   style: TextStyle(color: AppColor.black, fontSize: 18),
                 ),
               ],
@@ -61,7 +64,7 @@ class _ItemState extends State<Item> {
                 soundIsPlayer = true;
               });
               for (int i = 0; i < repeatCount; i++) {
-                await player.play(AssetSource(widget.number.sound));
+                await player.play(AssetSource(widget.item.sound));
                 await player.onPlayerComplete.first;
                 if (i < repeatCount - 1) {
                   await Future.delayed(const Duration(milliseconds: 300));

@@ -1,14 +1,14 @@
-class CardModel {
-  final String image;
+
+class CardModel  {
+  final String? image;
+  final String sound;
   final String japaneseName;
   final String englishName;
-  final String sound;
 
-
-  const CardModel({
-    required this.image,
-    required this.englishName,
+  CardModel({
+    this.image,
+    required this.sound,
     required this.japaneseName,
-    required this.sound
+    required this.englishName,
   });
 }
