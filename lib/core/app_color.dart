@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 abstract class AppColor{
   static Color white = Colors.white;
-  static Color orange = Colors.deepOrange;
-  static Color darkblue = Color.fromARGB(255, 6, 33, 56);
+  static Color olive =  Color(0xffBABF94);
+  static Color beig = Color(0xffF6F0D7);
+  static Color black = Color(0xff000000);
 }
 

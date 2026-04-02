@@ -1,6 +1,5 @@
 abstract class AppAssets {
   static String numbersUrl = 'assets/images/numbers';
-  static String numberLogo = '$numbersUrl/number.png';
   static String eight = '$numbersUrl/number_eight.png';
   static String five = '$numbersUrl/number_five.png';
   static String four = '$numbersUrl/number_four.png';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tuko_app/core/app_color.dart';
 import 'package:tuko_app/screens/color_screen.dart';
 import 'package:tuko_app/screens/family_screen.dart';
 import 'package:tuko_app/screens/home_screen.dart';
@@ -17,6 +18,14 @@ class TukoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColor.beig,
+          appBarTheme: AppBarTheme(
+            backgroundColor: AppColor.beig,
+            foregroundColor: Colors.black,
+            titleTextStyle: TextStyle(color: AppColor.black),
+          ),
+        ),
         routes: {
           HomeScreen.routeName: (context) => HomeScreen(),
           NumberScreen.routeName: (context) => NumberScreen(),

@@ -1,11 +1,14 @@
 class Number {
-  final String Image;
-  final String jpanissName;
+  final String image;
+  final String japaneseName;
   final String englishName;
+  final String sound;
+
 
   const Number({
-    required this.Image,
+    required this.image,
     required this.englishName,
-    required this.jpanissName,
+    required this.japaneseName,
+    required this.sound
   });
 }

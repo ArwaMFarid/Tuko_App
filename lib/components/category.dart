@@ -36,7 +36,7 @@ class _CategoryState extends State<Category> {
                 .size
                 .height * 0.09,
             width: double.infinity,
-            color: AppColor.darkblue,
+            color: AppColor.beig,
             child: Stack(
               alignment: Alignment.center,
               children: [
@@ -52,7 +52,7 @@ class _CategoryState extends State<Category> {
                       .size
                       .width * 1.5 : 0,
                   decoration: BoxDecoration(
-                    color: Colors.orange,
+                    color: AppColor.olive,
                   ),
                 ),
                 Padding(
@@ -61,7 +61,7 @@ class _CategoryState extends State<Category> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       widget.text!,
-                      style: const TextStyle(color: Colors.white, fontSize: 25),
+                      style: const TextStyle(color: Colors.black, fontSize: 25),
                     ),
                   ),
                 ),

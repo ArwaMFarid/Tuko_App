@@ -6,6 +6,7 @@ import 'package:tuko_app/screens/family_screen.dart';
 import 'package:tuko_app/screens/number_screen.dart';
 import 'package:tuko_app/screens/phases_screen.dart';
 
+
 class HomeScreen extends StatefulWidget {
   static const String routeName = "HomeScreen";
   final List<String> items = ["Numbers", "Colors", "Family Members", "Phases"];
@@ -21,12 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColor.darkblue,
-        appBar: AppBar(
-          title: Text("Tuko"),
-          titleTextStyle: TextStyle(fontSize: 30, color: Colors.white),
-          backgroundColor: AppColor.darkblue,
-        ),
+         appBar: AppBar(
+           title: Text("Tuko"),
+           titleTextStyle: TextStyle(fontSize: 30, color: AppColor.black),
+         ),
         body: ListView.builder(
           itemCount: widget.items.length,
             itemBuilder: (context, index) {
