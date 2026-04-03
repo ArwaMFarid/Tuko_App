@@ -4,13 +4,13 @@ import 'package:tuko_app/core/app_color.dart';
 import 'package:tuko_app/screens/color_screen.dart';
 import 'package:tuko_app/screens/family_screen.dart';
 import 'package:tuko_app/screens/number_screen.dart';
-import 'package:tuko_app/screens/phases_screen.dart';
+import 'package:tuko_app/screens/phrases_screen.dart';
 
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "HomeScreen";
-  final List<String> items = ["Numbers", "Colors", "Family Members", "Phases"];
-  final List<Widget> screens = [NumberScreen(), ColorScreen(), FamilyScreen(), PhasesScreen()];
+  final List<String> items = ["Numbers", "Colors", "Family members", "Phrases"];
+  final List<Widget> screens = [NumberScreen(), ColorScreen(), FamilyScreen(), PhrasesScreen()];
 
   HomeScreen({super.key});
 

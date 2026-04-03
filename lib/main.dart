@@ -4,7 +4,7 @@ import 'package:tuko_app/screens/color_screen.dart';
 import 'package:tuko_app/screens/family_screen.dart';
 import 'package:tuko_app/screens/home_screen.dart';
 import 'package:tuko_app/screens/number_screen.dart';
-import 'package:tuko_app/screens/phases_screen.dart';
+import 'package:tuko_app/screens/phrases_screen.dart';
 
 
 void main() {
@@ -32,7 +32,7 @@ class TukoApp extends StatelessWidget {
           NumberScreen.routeName: (context) => NumberScreen(),
           ColorScreen.routeName: (context) => ColorScreen(),
           FamilyScreen.routeName: (context) => FamilyScreen(),
-          PhasesScreen.routeName: (context) => PhasesScreen(),
+          PhrasesScreen.routeName: (context) => PhrasesScreen(),
         },
         home: HomeScreen()
     );

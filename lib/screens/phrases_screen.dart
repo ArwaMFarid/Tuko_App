@@ -4,10 +4,10 @@ import 'package:tuko_app/core/app_color.dart';
 import 'package:tuko_app/core/app_sound.dart';
 import 'package:tuko_app/models/card_model.dart';
 
-class PhasesScreen extends StatelessWidget {
-  static const String routeName = "PhasesScreen";
+class PhrasesScreen extends StatelessWidget {
+  static const String routeName = "PhrasesScreen";
 
-  PhasesScreen({super.key});
+  PhrasesScreen({super.key});
   List<CardModel> phrasesList = [
     CardModel(
       japaneseName: "Kimasu ka?",
@@ -61,7 +61,7 @@ class PhasesScreen extends StatelessWidget {
     return Scaffold(
 
       appBar: AppBar(
-        title: Text("Colors", style: TextStyle(color: AppColor.black,fontSize: 28),),
+        title: Text("Phrases", style: TextStyle(color: AppColor.black,fontSize: 28),),
       ),
       body: ListView.builder(
         itemCount: phrasesList.length,

@@ -83,7 +83,7 @@ class _FamilyScreenState extends State<FamilyScreen> {
     return Scaffold(
 
       appBar: AppBar(
-        title: Text("Family Members", style: TextStyle(color: AppColor.black,fontSize: 28),),
+        title: Text("Family members", style: TextStyle(color: AppColor.black,fontSize: 28),),
       ),
       body: ListView.builder(
         itemCount: familyList.length,
