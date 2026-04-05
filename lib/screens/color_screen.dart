@@ -71,7 +71,7 @@ class _ColorScreenState extends State<ColorScreen> {
     return Scaffold(
 
       appBar: AppBar(
-        title: Text("Colors", style: TextStyle(color: AppColor.black,fontSize: 28),),
+        title: Text("Colors"),
       ),
       body: ListView.builder(
         itemCount: colorList.length,

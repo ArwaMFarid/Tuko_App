@@ -5,6 +5,7 @@ import 'package:tuko_app/screens/family_screen.dart';
 import 'package:tuko_app/screens/home_screen.dart';
 import 'package:tuko_app/screens/number_screen.dart';
 import 'package:tuko_app/screens/phrases_screen.dart';
+import 'package:tuko_app/screens/splash/onboarding_screen.dart';
 
 
 void main() {
@@ -19,22 +20,23 @@ class TukoApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          scaffoldBackgroundColor: AppColor.beig,
+          scaffoldBackgroundColor: AppColor.white,
           appBarTheme: AppBarTheme(
             scrolledUnderElevation: 0,
-            backgroundColor: AppColor.beig,
-            foregroundColor: Colors.black,
-            titleTextStyle: TextStyle(color: AppColor.black),
+            backgroundColor: AppColor.red,
+            foregroundColor: AppColor.white,
+            titleTextStyle: TextStyle(color: AppColor.white,fontSize: 30),
           ),
         ),
         routes: {
           HomeScreen.routeName: (context) => HomeScreen(),
+          OnboardingScreen.routeName: (context) => OnboardingScreen(),
           NumberScreen.routeName: (context) => NumberScreen(),
           ColorScreen.routeName: (context) => ColorScreen(),
           FamilyScreen.routeName: (context) => FamilyScreen(),
           PhrasesScreen.routeName: (context) => PhrasesScreen(),
         },
-        home: HomeScreen()
+        home: OnboardingScreen()
     );
   }
 }

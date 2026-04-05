@@ -18,8 +18,8 @@ class _CustomItemCardState extends State<CustomItemCard> {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: AppColor.beig,
-        border: Border.all(width: 2, color: AppColor.olive),
+        color: AppColor.white,
+        border: Border.all(width: 2, color: AppColor.red),
       ),
       height: MediaQuery.of(context).size.height * 0.12,
       width: double.infinity,
@@ -33,7 +33,7 @@ class _CustomItemCardState extends State<CustomItemCard> {
                 image: widget.item.image != null
                     ? DecorationImage(image: AssetImage(widget.item.image!))
                     :null,
-                color: AppColor.olive,
+                color: AppColor.red,
               ),
             ),
           ),
@@ -56,7 +56,7 @@ class _CustomItemCardState extends State<CustomItemCard> {
             ),
           ),
           IconButton(
-            splashColor: AppColor.olive,
+            splashColor: AppColor.red,
             onPressed: () async {
               final player = AudioPlayer();
               int repeatCount = 2;
@@ -76,8 +76,8 @@ class _CustomItemCardState extends State<CustomItemCard> {
               });
             },
             icon: soundIsPlayer
-                ? Icon(Icons.pause, color: AppColor.olive, size: 50)
-                : Icon(Icons.play_arrow, color: AppColor.olive, size: 50),
+                ? Icon(Icons.pause, color: AppColor.red, size: 50)
+                : Icon(Icons.play_arrow, color: AppColor.red, size: 50),
           ),
         ],
       ),

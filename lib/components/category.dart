@@ -6,7 +6,7 @@ class Category extends StatefulWidget {
   final Color? color;
   final VoidCallback? ontap;
 
-  const Category({this.text,this.color, this.ontap});
+  const Category({super.key,this.text,this.color, this.ontap});
 
   @override
   _CategoryState createState() => _CategoryState();
@@ -36,7 +36,7 @@ class _CategoryState extends State<Category> {
                 .size
                 .height * 0.09,
             width: double.infinity,
-            color: AppColor.beig,
+            color: AppColor.white,
             child: Stack(
               alignment: Alignment.center,
               children: [
@@ -52,7 +52,7 @@ class _CategoryState extends State<Category> {
                       .size
                       .width * 1.5 : 0,
                   decoration: BoxDecoration(
-                    color: AppColor.olive,
+                    color: AppColor.red,
                   ),
                 ),
                 Padding(

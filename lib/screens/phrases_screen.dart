@@ -8,7 +8,7 @@ class PhrasesScreen extends StatelessWidget {
   static const String routeName = "PhrasesScreen";
 
   PhrasesScreen({super.key});
-  List<CardModel> phrasesList = [
+  final List<CardModel> phrasesList = [
     CardModel(
       japaneseName: "Kimasu ka?",
       englishName: "Are you comming?",

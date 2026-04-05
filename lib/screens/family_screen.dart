@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tuko_app/components/custom_item_card.dart';
 import 'package:tuko_app/core/app_assets.dart';
-import 'package:tuko_app/core/app_color.dart';
 import 'package:tuko_app/core/app_sound.dart';
 import 'package:tuko_app/models/card_model.dart';
 
@@ -83,7 +82,7 @@ class _FamilyScreenState extends State<FamilyScreen> {
     return Scaffold(
 
       appBar: AppBar(
-        title: Text("Family members", style: TextStyle(color: AppColor.black,fontSize: 28),),
+        title: Text("Family members"),
       ),
       body: ListView.builder(
         itemCount: familyList.length,

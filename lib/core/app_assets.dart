@@ -34,4 +34,9 @@ abstract class AppAssets {
   static String white = '$colorUrl/color_white.png';
   static String yellow = '$colorUrl/yellow.png';
 
+  static String logo = 'assets/images/Tuko.png';
+  static String splash1 = 'assets/images/1.png';
+  static String splash2 = 'assets/images/2.png';
+  static String splash3 = 'assets/images/3.png';
+
 }

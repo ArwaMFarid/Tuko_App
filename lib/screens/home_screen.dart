@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tuko_app/components/category.dart';
-import 'package:tuko_app/core/app_color.dart';
 import 'package:tuko_app/screens/color_screen.dart';
 import 'package:tuko_app/screens/family_screen.dart';
 import 'package:tuko_app/screens/number_screen.dart';
@@ -24,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
          appBar: AppBar(
            title: Text("Tuko"),
-           titleTextStyle: TextStyle(fontSize: 30, color: AppColor.black),
          ),
         body: ListView.builder(
           itemCount: widget.items.length,
