@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:tuko_app/core/app_color.dart';
+import 'package:tuko_app/screens/auth/login_screen.dart';
+import 'package:tuko_app/screens/auth/register_screen.dart';
 import 'package:tuko_app/screens/color_screen.dart';
 import 'package:tuko_app/screens/family_screen.dart';
 import 'package:tuko_app/screens/home_screen.dart';
 import 'package:tuko_app/screens/number_screen.dart';
 import 'package:tuko_app/screens/phrases_screen.dart';
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-void main() {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(TukoApp());
 }
 
@@ -29,12 +38,14 @@ class TukoApp extends StatelessWidget {
         ),
         routes: {
           HomeScreen.routeName: (context) => HomeScreen(),
+          LoginScreen.routeName: (context) => LoginScreen(),
+          RegisterScreen.routeName: (context) => RegisterScreen(),
           NumberScreen.routeName: (context) => NumberScreen(),
           ColorScreen.routeName: (context) => ColorScreen(),
           FamilyScreen.routeName: (context) => FamilyScreen(),
           PhrasesScreen.routeName: (context) => PhrasesScreen(),
         },
-        home: HomeScreen()
+        home: LoginScreen()
     );
   }
 }

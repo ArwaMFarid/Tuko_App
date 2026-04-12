@@ -34,4 +34,13 @@ abstract class AppAssets {
   static String white = '$colorUrl/color_white.png';
   static String yellow = '$colorUrl/yellow.png';
 
+  static String toriiGate2 = "assets/images/toriigate2.jpg";
+  static String bird = "assets/images/bird.png";
+  static String google = "assets/svg/google.svg";
+  static String faceBook = "assets/svg/facebook.svg";
+  static String tassel = "assets/images/tassel.png";
+  static String katana = "assets/images/katana.png";
+
+
+
 }

@@ -5,5 +5,7 @@ abstract class AppColor{
   static Color olive =  Color(0xffBABF94);
   static Color beig = Color(0xffF6F0D7);
   static Color black = Color(0xff000000);
+  static const Color red =  Color(0xffBC002D);
+
 }
 
