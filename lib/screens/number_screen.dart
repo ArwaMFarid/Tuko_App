@@ -6,7 +6,7 @@ import 'package:tuko_app/models/card_model.dart';
 
 class NumberScreen extends StatefulWidget {
   static const String routeName = "NumberScreen";
-  NumberScreen({super.key});
+  const NumberScreen({super.key});
 
   @override
   State<NumberScreen> createState() => _NumberScreenState();

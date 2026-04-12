@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tuko_app/components/custom_item_card.dart';
 import 'package:tuko_app/core/app_assets.dart';
-import 'package:tuko_app/core/app_color.dart';
 import 'package:tuko_app/core/app_sound.dart';
 import 'package:tuko_app/models/card_model.dart';
 

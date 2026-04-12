@@ -3,13 +3,13 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:tuko_app/core/app_assets.dart';
 import 'package:tuko_app/core/app_color.dart';
 import 'package:tuko_app/models/onboarding_model.dart';
-import 'package:tuko_app/screens/home_screen.dart';
+import 'package:tuko_app/screens/auth/login_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   static const String routeName = "OnboardingScreen";
   OnboardingScreen({super.key});
 
-  List<OnboardingModel> onboardingData = [
+  final List<OnboardingModel> onboardingData = [
     OnboardingModel(
       topMessage: "Welcome to",
       topImage: AppAssets.logo,
@@ -78,7 +78,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           key: ValueKey<int>(currentIndex),
                           children: [
                             Text(
-                              "${widget.onboardingData[index].topMessage}",
+                              widget.onboardingData[index].topMessage,
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: screenWidth * .09,
@@ -114,7 +114,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           children: [
                             SizedBox(height: screenHeight * .09),
                             Text(
-                              "${widget.onboardingData[index].quote}",
+                              widget.onboardingData[index].quote,
                               textAlign: TextAlign.center,
                               style: TextStyle(color: AppColor.red, fontSize: 20),
                             ),
@@ -128,7 +128,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                      curve: Curves.easeInOut
                                  );
                                }else{
-                                 Navigator.pushNamed(context, HomeScreen.routeName);
+                                 Navigator.pushReplacementNamed(context, LoginScreen.routeName);
                                }
                               },
                               style: ElevatedButton.styleFrom(
